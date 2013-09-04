@@ -1,0 +1,36 @@
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :name, class: "right inline" %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :name %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :designation, class: "right inline", title: "Please enter the designation", data: {tooltip: true } %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :designation %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-9 small-offset-3 columns">
+    <%= f.submit %>
+  </div>
+</div>
+
+<% end %>
