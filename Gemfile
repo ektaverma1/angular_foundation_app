@@ -7,6 +7,7 @@ gem 'rails', '4.0.0'
 gem 'mysql'
 
 gem 'zurb-foundation'
+gem 'angularjs-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
